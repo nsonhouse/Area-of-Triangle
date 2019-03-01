@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Determine the Area of a triangle when base and height are unknown.</title>
+</head>
+<body>           
+    <div id="output"> </div>    
+
+    <script>
+        //Hero's formula is used to find the area of a triangle given the length of the 3 sides
+        // S = the triangles Semiperimeter
+        // s = the sides of the triangle
+       
+        function hero_formula(s1, s2, s3) {
+           let S = (s1 + s2 + s3) / 2;
+
+           let area = Math.sqrt( S * (S-s1) * (S-s2) * (S-s3) );
+           return area;
+       }
+       //AOT = Area of Triangle
+       let AOT = hero_formula(5, 6, 7); 
+
+       document.getElementById("output").innerHTML = "The area of a triangle whose sides measeure 5, 6, and 7 units is: " 
+       + AOT.toFixed(4);
+       
+    </script>   
+    
+</body>
+</html>
